@@ -40,7 +40,7 @@ namespace
 
 	bool IsBindable(const FKey& Key)
 	{
-		return Key.IsValid() && Key != EKeys::AnyKey && !Key.IsFloatAxis() && !Key.IsVectorAxis()
+		return Key.IsValid() && Key != EKeys::AnyKey && !Key.IsAxis1D() && !Key.IsAxis2D() && !Key.IsAxis3D()
 			&& !Key.IsGamepadKey() && !Key.IsModifierKey() && !Key.IsMouseButton();
 	}
 
